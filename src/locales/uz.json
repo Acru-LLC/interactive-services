@@ -4518,7 +4518,14 @@
     "card_title": "Sud xabarnomasi",
     "card_subtitle": "Xo'jalik yurituvchi subyektlar ustav fondidagi (ustav kapitalidagi) aksiyalarni (ulushlarni) olish hamda ularni qo'shib yuborish va qo'shib olishga doir bitimlarga oldindan rozilik berish to'g'risida murojaat yuborish",
     "require_txt": "Sud xabarnomasini tekshirish uchun JSH SHIR yoki STIR kiriting",
-    "take_court_btn": "Xabarnomani o'qish"
+    "take_court_btn": "Xabarnomani o'qish",
+    "checked": "Tekshirildi",
+    "checked_today": "Bugun tekshirildi",
+    "telegram": "Bizning Telegram bot",
+    "support": "Texnik xizmat ko'rsatish",
+    "qomita": "Raqobat qo'mitasi",
+    "modal_message": "Hurmatli fuqaro Sizga elektron shaklda komissiya xabarnomasi kelib tushgan!",
+    "modal_btn": "Xabarni o'qish"
   },
   "online_kuzatuv": {
     "card_title": "ONLAYN KUZATUV",
