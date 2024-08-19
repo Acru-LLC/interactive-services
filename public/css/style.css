@@ -61,6 +61,9 @@ body {
 .green-gradient-bg1 {
     background: linear-gradient(to top, #2A6D60, #217C69, #0E977B)!important;
 }
+.green-gradient-bg2 {
+    background: linear-gradient(to right, #2A6D60, #217C69, #0E977B)!important;
+}
 
 .default-bg {
     background-color: #0F8C72;
