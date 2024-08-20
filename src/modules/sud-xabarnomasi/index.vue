@@ -7,6 +7,7 @@ import Toast from "vue-toastification";
 export default {
   data() {
     return {
+      dailyIndex: {},
       loading: false,
       searchingModal: false,
       isTelefonActive: true,
@@ -96,7 +97,7 @@ export default {
     sendRequest() {
       this.loading = true;
       let check = {
-        stir: this.telefonInput,
+        stir: this.telefonInput ? this.telefonInput.replace(/\s+/g, '') : '',
         pinfl: this.jshshirInput,
         fish: this.fish,
         appealCount: this.appealCount,
@@ -106,7 +107,7 @@ export default {
       return CheckService.courtCheckOnline(check)
           .then((result) => {
             this.getUserDatas = result.data;
-            console.log(result.data)
+            // console.log(result.data)
             this.phoneNumber = '';
             this.pinfl = '';
             this.fish = '';
@@ -140,11 +141,30 @@ export default {
             this.loading = false;
           });
     },
+
+    fetchDailyIndex() {
+      this.searchLoader = true;
+      return CheckService.getDailyIndex()
+          .then((result) => {
+            this.dailyIndex = result.data;
+            // console.log(result.data)
+          })
+          .catch((err) => {
+            this.$toast.error('Error');
+            // this.catchErr(err);
+          })
+          .finally(() => {
+            this.searchLoader = false;
+          });
+    },
   },
   mounted() {
     this.value = this.languages.find((x) => x.language === i18n.locale);
     this.text = this.value.title;
     this.flag = this.value.flag;
+  },
+  created() {
+    this.fetchDailyIndex();
   },
 }
 </script>
@@ -210,11 +230,11 @@ export default {
         </button>
       </div>
 
-      <div class="container my-5">
+      <div class="container-box my-5">
         <div class="row text-center">
           <div class="col-md-6 mb-4">
             <div class="info-box">
-              <h1 class="counter custom-font">1447</h1>
+              <h1 class="counter custom-font">{{dailyIndex.body.finished}}</h1>
               <p class="custom-font text-color font-size-17">
                 {{ $t('sud_xabarnoma.checked') }}
               </p>
@@ -222,7 +242,7 @@ export default {
           </div>
           <div class="col-md-6 mb-4">
             <div class="info-box highlighted">
-              <h1 class="counter custom-font">17</h1>
+              <h1 class="counter custom-font">{{dailyIndex.body.lastDayFinished}}</h1>
               <p class="custom-font text-color font-size-17">
                 {{ $t('sud_xabarnoma.checked_today') }}
               </p>
@@ -232,7 +252,7 @@ export default {
 
         <div class="contact-info custom-font">
           <p class="custom-font"><img width="30" height="30" src="./tg_gradient.svg" alt="">{{ $t('sud_xabarnoma.telegram') }}</p>
-          <p class="custom-font"><img width="30" height="30" src="./info_gradient.svg" alt=""> {{ $t('sud_xabarnoma.support') }}: <a  class="custom-font" href="tel:+998712074800">71-207-48-00 </a><a  class="custom-font" href="tel:1159">(1159)</a></p>
+            <p class="custom-font"><img width="30" height="30" src="./info_gradient.svg" alt=""> {{ $t('sud_xabarnoma.support') }}: <a  class="custom-font" href="tel:+998712074800">71-207-48-00 </a><a  class="custom-font" href="tel:1159">(1159)</a></p>
         </div>
 
         <footer class="mt-5">
@@ -240,6 +260,9 @@ export default {
           <p class="custom-font">2024</p>
         </footer>
       </div>
+      <b-button style="background: #F39138" class="btn btn-warning float-right" size="md" @click="$router.go(-1)">
+        &leftarrow; {{ $t("actions.back") }}
+      </b-button>
 
     </b-col>
     <b-col cols="8 d-flex justify-content-center align-items-center position-relative">
@@ -247,13 +270,13 @@ export default {
       <div v-if="modalVisible" class="modal-container">
         <span class="close-btn" @click="modalVisible = false">&times;</span>
         <div class="modal-number mt-3 custom-font">
-          {{ getUserDatas ? getUserDatas : 14}}
+          {{ getUserDatas ? getUserDatas : 0}}
         </div>
         <div class="text-color text-center p-3">
           <p class="modal-text font-size-17 custom-font">
             {{ $t('sud_xabarnoma.modal_message') }}
           </p>
-          <a href="#" target="_blank" class="modal-button green-gradient-bg2 btn btn-success custom-font">
+          <a href="https://cabinet.fairtech.uz/" target="_blank" class="modal-button green-gradient-bg2 btn btn-success custom-font">
             {{ $t('sud_xabarnoma.modal_btn') }}
           </a>
         </div>
@@ -300,7 +323,7 @@ export default {
   font-size: 12px;
 }
 
-.container {
+.container-box {
   max-width: 600px;
   margin: 0 auto;
 }
