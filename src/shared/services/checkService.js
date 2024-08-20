@@ -13,6 +13,10 @@ const checkService = {
     return ApiService.post(`/complaens_info_case_field/get-work-number?stir=${data.stir ? data.stir : ''}&pinfl=${data.pinfl ? data.pinfl : ''}`)
   },
 
+  getDailyIndex() {
+    return ApiService.get(`complaens_info_case_field/get-all-last-day-count`);
+  },
+
   // online sud qarori
   onlineSudQarori(data){
     return ApiService.post(`/complaens_info_case_field/get-work-qaror?stir=${data.stir ? data.stir : ''}&pinfl=${data.pinfl ? data.pinfl : ''}`)
