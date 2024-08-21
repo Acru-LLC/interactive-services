@@ -323,11 +323,9 @@
     }
   },
   "footerTitle": "holatiga",
-
   "column": {
     "location1": "Geojoylashuvi",
     "selectIjro": "Qo‘shimcha maʼlumotlar",
-
     "savdoTarmoq": "Savdo tarmog'i",
     "mainData": "Asosiy ma'lumotlar",
     "resultDate": "Natija kiritilgan sana",
@@ -1267,7 +1265,7 @@
     "integration": {
       "error_message": "Информация отсутствует в базе данных",
       "title": "Интеграция",
-      "bodyTitle":"ʻʻFAIR TECHʼʼ ЕДИНАЯ ПЛАТФОРМА ИНТЕГРАЦИИ ИНФОРМАЦИОННОЙ СИСТЕМЫ",
+      "bodyTitle": "ʻʻFAIR TECHʼʼ ЕДИНАЯ ПЛАТФОРМА ИНТЕГРАЦИИ ИНФОРМАЦИОННОЙ СИСТЕМЫ",
       "personallashtirish": {
         "required_info_title": "Введите информацию о физическом лице",
         "menu_title": "Агентство персонализации",
@@ -2632,24 +2630,23 @@
       "salerEmail": "Sotuvchi tashkilotning elektron pochta manzili",
       "salerRegionName": "Sotuvchi tashkilot viloyati",
       "salerDistrictName": "Sotuvchi tashkilot tumani",
-      "buyerName" : "Xaridor tashkilot nomi",
-      "buyerTin" : "Xaridor tashkilot STIRi",
-      "buyerAddress" : "Xaridor tashkilot manzili",
-      "buyerEmail" : "Xaridor tashkilotning elektron pochta manzili",
-      "buyerRegionName" : "Xaridor tashkilot viloyati",
-      "buyerDistrictName" : "Xaridor tashkilot tumani",
-      "productName" : "Maxsulot nomi",
-      "productMxikCode" : "Maxsulot MXIK kodi",
-      "productPaymentPrice" : "Sotilgan narx",
-      "productReferentPrice" : "Sotish ruxsat berilgan narx",
-      "productOneItemDifferentPrice" : "1 ta maxsulot uchun oshirilgan narx",
-      "productDifferencePrice" : "To`liq maxsulot soni uchun oshirilgan narx",
-      "productCount" : "Sotilgan maxsulot soni",
-      "productPackageName" : "O`lchov birligi",
-      "productPackageCode" : "Paket kodi",
-      "productCommittentTinOrPinfl" : "Ishlab chiqaruvchi tashkilot STIRi"
+      "buyerName": "Xaridor tashkilot nomi",
+      "buyerTin": "Xaridor tashkilot STIRi",
+      "buyerAddress": "Xaridor tashkilot manzili",
+      "buyerEmail": "Xaridor tashkilotning elektron pochta manzili",
+      "buyerRegionName": "Xaridor tashkilot viloyati",
+      "buyerDistrictName": "Xaridor tashkilot tumani",
+      "productName": "Maxsulot nomi",
+      "productMxikCode": "Maxsulot MXIK kodi",
+      "productPaymentPrice": "Sotilgan narx",
+      "productReferentPrice": "Sotish ruxsat berilgan narx",
+      "productOneItemDifferentPrice": "1 ta maxsulot uchun oshirilgan narx",
+      "productDifferencePrice": "To`liq maxsulot soni uchun oshirilgan narx",
+      "productCount": "Sotilgan maxsulot soni",
+      "productPackageName": "O`lchov birligi",
+      "productPackageCode": "Paket kodi",
+      "productCommittentTinOrPinfl": "Ishlab chiqaruvchi tashkilot STIRi"
     },
-
     "pharm_chakana": "Chakana",
     "new": {
       "sendRequestToPharmacy": "Dorixonaga so'rov yuborish",
@@ -2721,7 +2718,6 @@
       "sendFile": "Hujjat yuborilgan sana",
       "fileName": "Fayl nomi",
       "seeDown": "Ko'rish va yuklab olish",
-
       "countInfo": "Schet-faktura ma'lumotlari",
       "countId": "Schet-faktura ID raqami",
       "countDate": "Schet-faktura sanasi",
@@ -3423,21 +3419,21 @@
       "tender": "DAVLAT BUYURTMASI BO‘YIChA O‘TKAZILGAN TANLOV (TENDER) SAVDOLARINI O‘RGANISH SOHASINING SAMARADORLIGI VA ULARNI BAHOLASH NATIJALARI",
       "withRegionTender": "NING DAVLAT BUYURTMASI BO‘YICHA O‘TKAZILGAN TANLOV (TENDER) SAVDOLARINI O‘RGANISH SOHASINING SAMARADORLIGI VA ULARNI BAHOLASH NATIJALARIGA DOIR MA'LUMOTLAR",
       "workIntended": "QO‘ZG‘ATILGAN ISHLARNI KO‘RIB CHIQISH SOHASINING SAMARADORLIGI VA ULARNI BAHOLASH NATIJALARI",
-      "monitorResultFirst":"QO'ZG'ATILGAN ISHLAR VA ULARNI KO'RIB CHIQISH NATIJALARI BO'YICHA MONITORING RO'YXATI",
-      "monitorResultSecond":"QO'ZG'ATILGAN ISHLAR BO'YICHA CHIQARILGAN QAROR VA KO'RSATMALAR IJROSIGA DOIR MONITORING RO'YXATI",
+      "monitorResultFirst": "QO'ZG'ATILGAN ISHLAR VA ULARNI KO'RIB CHIQISH NATIJALARI BO'YICHA MONITORING RO'YXATI",
+      "monitorResultSecond": "QO'ZG'ATILGAN ISHLAR BO'YICHA CHIQARILGAN QAROR VA KO'RSATMALAR IJROSIGA DOIR MONITORING RO'YXATI",
       "withworkIntended": "NING QO‘ZG‘ATILGAN ISHLARNI KO‘RIB CHIQISH SOHASINING SAMARADORLIGI VA ULARNI BAHOLASH NATIJALARIGA DOIR MA'LUMOTLAR",
       "legalEffect": "YURIDIK TA'MINLASH SOHASINING SAMARADORLIGI VA ULARNI BAHOLASH NATIJALARI",
       "withlegalEffect": "NING YURIDIK TA'MINLASH SOHASINING SAMARADORLIGI VA ULARNI BAHOLASH NATIJALARIGA DOIR MA'LUMOTLAR",
       "appealEffect": "MUROJAATLAR BILAN ISHLASH SOHASINING SAMARADORLIGI VA ULARNI BAHOLASH NATIJALARI",
       "withappealEffect": "NING MUROJAATLAR BILAN ISHLASH SOHASINING SAMARADORLIGI VA ULARNI BAHOLASH NATIJALARIGA DOIR MA'LUMOTLAR",
-      "legalAll" : "SUDLARDA ISHTIROKI HAQIDA STATISTIK MA'LUMOT",
+      "legalAll": "SUDLARDA ISHTIROKI HAQIDA STATISTIK MA'LUMOT",
       "legalEconomic": "IQTISODIY SUDLARDA ISHTIROKI HAQIDA STATISTIK MA'LUMOT",
       "legalPersonal": "FUQAROLIK ISHLARI BO'YICHA SUDLARDA ISHTIROKI HAQIDA STATISTIK MA'LUMOT",
       "legalAdministrative": "MA'MURIY SUDLARDA ISHTIROKI HAQIDA STATISTIK MA'LUMOT",
       "firstLegalList": "BIRINCHI INSTANSIYA SUDLARIDA ISHTIROK ETGAN ISHLAR RO'YXATI",
       "secondLegalList": "APELLYATSIYA VA KASSATSIYA INSTANSIYALARI SUDLARIDA ISHTIROK ETGAN ISHLAR RO'YXATI",
       "thirdLegalList": "TAKRORIY KASSATSIYA VA SUD QARORLARINI YANGI OCHILGAN HOLATLAR BO'YICHA QAYTA KO'RISH BOSQICHIDA ISHTIROK ETGAN ISHLAR RO'YXATI",
-      "tovarProduct":"TADBIRKORLIK SUB'YEKTLARI TOMONIDAN ISTE'MOL VA TEXNIK ETIL SPIRTIDAN MAQSADLI FOYDALANILISHIGA DOIR MA'LUMOT",
+      "tovarProduct": "TADBIRKORLIK SUB'YEKTLARI TOMONIDAN ISTE'MOL VA TEXNIK ETIL SPIRTIDAN MAQSADLI FOYDALANILISHIGA DOIR MA'LUMOT",
       "courtSession": "SUD MAJLISLARI JADVALI"
     },
     "department": {
@@ -4055,7 +4051,6 @@
           "aloneTitle": "Хўжалик юритувчи субъектларни қўшиб юбориш, қўшиб олиш ва акцияларни (улушларни) олиш бўйича битимларга олдиндан розилик берилиши тўғрисида келиб тушган мурожаатлар ҳамда уларни кўриб чиқиш билан боғлиқ статистик\nМАЪЛУМОТ",
           "title1": "Хўжалик юритувчи субъектларни қўшиб юбориш, қўшиб олиш ва акцияларни (улушларни) олиш бўйича битимларга олдиндан розилик берилиши тўғрисида келиб тушган мурожаатлар ҳамда уларни кўриб чиқиш билан боғлиқ статистик рўйхат\nМАЪЛУМОТ",
           "aloneTitle1": "Хўжалик юритувчи субъектларни қўшиб юбориш, қўшиб олиш ва акцияларни (улушларни) олиш бўйича битимларга олдиндан розилик берилиши тўғрисида келиб тушган мурожаатлар ҳамда уларни кўриб чиқиш билан боғлиқ статистик рўйхат\nМАЪЛУМОТ"
-
         }
       },
       "monopoly": {
@@ -4117,7 +4112,6 @@
     "product_price": "Махсулот нархи",
     "copy1": "Геожойлашув нусхаси кўчирилди",
     "product_info": "Маҳсулот маълумотлари",
-
     "success": "Маълумотларни юклаб олиш муваффақиятли бажарилди",
     "empty_table": "Маълумот топилмади",
     "sorting": "Фильтры",
@@ -4495,6 +4489,40 @@
         "name4": "Шундан, экспорт хажми суммаси"
       }
     }
+  },
+  "stations": {
+    "title": "Ёқилғи махсулотлари",
+    "title1": "Ўзбекистон Республикасидаги Бензин, Пропан, Метан ёқилғиларининг ўртача нархи",
+    "count": "Шахобчалар сони",
+    "max_cost": "Энг юқори нарх",
+    "min_cost": "Энг арзон нарх",
+    "max_cost1": "Юқори нарх",
+    "min_cost1": "Арзон нарх",
+    "propan": "Пропан",
+    "metan": "Метан",
+    "benzin": "Бензин",
+    "benzin80": "Бензин АИ 80",
+    "benzin92": "Бензин АИ 92",
+    "benzin95": "Бензин АИ 95",
+    "dizel": "Дизель",
+    "info_stations": "Шахобчалар маълумотлари",
+    "propan_stations": "Пропан шахобчаси",
+    "metan_stations": "Метан шахобчаси",
+    "benzin_stations": "Бензин шахобчаси",
+    "grafik": "Нарх ўзгариши графиги",
+    "oy": "Ой",
+    "kun": "Кун",
+    "stations_name": "Шахобча номи",
+    "address": "Шахобча манзили",
+    "direktor": "Шахобча директори",
+    "name": "Ёқилғи номи",
+    "cost": "Нархи",
+    "belgilangan": "Белгиланган нархи",
+    "date": "Сана",
+    "loading": "Маълумотлар юкланмоқда...",
+    "stations_search": "Шахобчалар бўйича қидириш",
+    "stations_info": "Шахобча маълумотлари",
+    "stations_cost_info": "Сотилган ёқилғи маълумотлари"
   },
   "court_online": {
     "card_title": "ОНЛАЙН РЕШЕНИЕ И ПОКАЗ",

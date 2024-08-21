@@ -41,6 +41,15 @@ const routes = [
         children: []
     },
     {
+        path: '/fair-price-stations',
+        name: 'FairPriceStations',
+        // meta: {
+        //     public: true,
+        // },
+        component: () => import('/src/modules/fair-price/stations/Index1.vue'),
+        children: []
+    },
+    {
         path: '/online-watching',
         name: 'OnlineWatching',
         // meta: {
