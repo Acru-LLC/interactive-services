@@ -87,9 +87,9 @@ export default {
                 </a>
               </div>
               <!-- "Batafsil" Button with Chevron -->
-              <button @click="toggleSubtitle('one')" class="btn btn-link p-0">
+              <button @click="toggleSubtitle('one')" class="btn btn-link p-0 font-size-17">
                 {{ $t('actions.details') }}
-                <i :class="isSubtitleVisible ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+                <i class="font-size-12" :class="isSubtitleVisible ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
               </button>
             </div>
         </div>
@@ -107,9 +107,9 @@ export default {
                 </p>
               </div>
               <!-- "Batafsil" Button with Chevron -->
-              <button @click="toggleSubtitle('two')" class="btn btn-link p-0">
+              <button @click="toggleSubtitle('two')" class="btn btn-link p-0 font-size-17">
                 {{ $t('actions.details') }}
-                <i :class="isSubtitleVisible2 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+                <i class="font-size-12" :class="isSubtitleVisible2 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
               </button>
             </div>
         </div>
@@ -129,9 +129,9 @@ export default {
           </router-link>
               </div>
               <!-- "Batafsil" Button with Chevron -->
-              <button @click="toggleSubtitle('three')" class="btn btn-link p-0">
+              <button @click="toggleSubtitle('three')" class="btn btn-link p-0 font-size-17">
                 {{ $t('actions.details') }}
-                <i :class="isSubtitleVisible3 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+                <i class="font-size-12" :class="isSubtitleVisible3 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
               </button>
             </div>
 
@@ -150,9 +150,9 @@ export default {
                 </a>
               </div>
               <!-- "Batafsil" Button with Chevron -->
-              <button @click="toggleSubtitle('four')" class="btn btn-link p-0">
+              <button @click="toggleSubtitle('four')" class="btn btn-link p-0 font-size-17">
                 {{ $t('actions.details') }}
-                <i :class="isSubtitleVisible4 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+                <i class="font-size-12" :class="isSubtitleVisible4 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
               </button>
             </div>
         </div>
@@ -171,9 +171,9 @@ export default {
               </p>
             </div>
             <!-- "Batafsil" Button with Chevron -->
-            <button @click="toggleSubtitle('five')" class="btn btn-link p-0">
+            <button @click="toggleSubtitle('five')" class="btn btn-link p-0 font-size-17">
               {{ $t('actions.details') }}
-              <i :class="isSubtitleVisible5 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+              <i class="font-size-12" :class="isSubtitleVisible5 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
             </button>
           </div>
         </div>
@@ -194,9 +194,9 @@ export default {
                 </router-link>
               </div>
               <!-- "Batafsil" Button with Chevron -->
-              <button @click="toggleSubtitle('six')" class="btn btn-link p-0">
+              <button @click="toggleSubtitle('six')" class="btn btn-link p-0 font-size-17">
                 {{ $t('actions.details') }}
-                <i :class="isSubtitleVisible6 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+                <i class="font-size-12" :class="isSubtitleVisible6 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
               </button>
             </div>
         </div>
@@ -215,9 +215,9 @@ export default {
                 </a>
               </div>
               <!-- "Batafsil" Button with Chevron -->
-              <button @click="toggleSubtitle('seven')" class="btn btn-link p-0">
+              <button @click="toggleSubtitle('seven')" class="btn btn-link p-0 font-size-17">
                 {{ $t('actions.details') }}
-                <i :class="isSubtitleVisible7 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+                <i class="font-size-12" :class="isSubtitleVisible7 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
               </button>
             </div>
         </div>
@@ -235,9 +235,9 @@ export default {
                 </router-link>
               </div>
               <!-- "Batafsil" Button with Chevron -->
-              <button @click="toggleSubtitle('eight')" class="btn btn-link p-0">
+              <button @click="toggleSubtitle('eight')" class="btn btn-link p-0 font-size-17">
                 {{ $t('actions.details') }}
-                <i :class="isSubtitleVisible8 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+                <i class="font-size-12" :class="isSubtitleVisible8 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
               </button>
             </div>
         </div>
@@ -257,9 +257,9 @@ export default {
                 </router-link>
               </div>
               <!-- "Batafsil" Button with Chevron -->
-              <button @click="toggleSubtitle('nine')" class="btn btn-link p-0">
+              <button @click="toggleSubtitle('nine')" class="btn btn-link p-0 font-size-17">
                 {{ $t('actions.details') }}
-                <i :class="isSubtitleVisible9 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+                <i class="font-size-12" :class="isSubtitleVisible9 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
               </button>
             </div>
         </div>
@@ -277,9 +277,9 @@ export default {
                 </router-link>
               </div>
               <!-- "Batafsil" Button with Chevron -->
-              <button @click="toggleSubtitle('ten')" class="btn btn-link p-0">
+              <button @click="toggleSubtitle('ten')" class="btn btn-link p-0 font-size-17">
                 {{ $t('actions.details') }}
-                <i :class="isSubtitleVisible10 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+                <i class="font-size-12" :class="isSubtitleVisible10 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
               </button>
             </div>
         </div>
@@ -435,6 +435,9 @@ export default {
 }
 .inactive-card{
   height: 212px;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: space-between;
 }
 @media only screen and (max-width: 767px) {
   .first-row-col {
