@@ -180,17 +180,17 @@ export default {
         </div>
 
         <div class="col-lg-3 col-md-6 col-12 mb-4">
-          <div class="p-3 h-100"
-               @click="showModalPrice = true"
-               style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
-            <div class="hover-effect">
-              <img src="@/assets/image/onlayn_kuzatuv.svg" alt="" class="custom-icons">
-              <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.fair_price.card_title') }}</h4>
-              <p class="padding-t-15 text-color">
-                {{ $t('services.fair_price.body_title') }}
-              </p>
-            </div>
-          </div>
+<!--          <div class="p-3 h-100"-->
+<!--               @click="showModalPrice = true"-->
+<!--               style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">-->
+<!--            <div class="hover-effect">-->
+<!--              <img src="@/assets/image/onlayn_kuzatuv.svg" alt="" class="custom-icons">-->
+<!--              <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.fair_price.card_title') }}</h4>-->
+<!--              <p class="padding-t-15 text-color">-->
+<!--                {{ $t('services.fair_price.body_title') }}-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
           <!--          <router-link to="/fair-price" teg="div">-->
           <!--            <div class="p-3 h-100"-->
           <!--                 style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">-->
@@ -208,8 +208,8 @@ export default {
           <!--          </router-link>-->
             <div class="p-3" :class="isSubtitleVisible6 ? 'active-card' : 'inactive-card'"
                  style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
-              <div class="hover-effect">
-                <router-link to="/fair-price" >
+              <div class="hover-effect" @click="showModalPrice = true">
+<!--                <router-link to="/fair-price" >-->
                 <img src="@/assets/image/fair_prce.svg" alt="" class="custom-icons">
                 <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.fair_price.card_title') }}</h4>
                 <hr class="green-gradient-bg my-1 w-50 ml-0" style="height: 2px">
@@ -218,7 +218,7 @@ export default {
                 <p class="padding-t-15 text-color" v-if="isSubtitleVisible6">
                   {{ $t('services.fair_price.body_title') }}
                 </p>
-                </router-link>
+<!--                </router-link>-->
               </div>
               <!-- "Batafsil" Button with Chevron -->
               <button @click="toggleSubtitle('six')" class="btn btn-link p-0 font-size-17">
@@ -423,8 +423,8 @@ export default {
             </router-link>
           </b-col>
 
-          <b-col>
-            <router-link to="/fair-price-stations" teg="div">
+          <b-col style="cursor: not-allowed">
+            <router-link to="/fair-price-stations" teg="div" class="disabled-card">
               <div class="p-3 h-100"
                    style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
                 <div class="hover-effect">
@@ -509,13 +509,20 @@ export default {
 }
 */
 .active-card{
-  height: 100%;
+  height: auto;
 }
 .inactive-card{
   height: 212px;
   //display: flex;
   //flex-direction: column;
   //justify-content: space-between;
+}
+.disabled-card {
+  pointer-events: none; /* Disables click events */
+  opacity: 0.6; /* Makes the element look disabled by reducing its opacity */
+  cursor: not-allowed; /* Changes the cursor to indicate that the element is disabled */
+  background-color: #e0e0e0; /* Optional: Adds a background color to reinforce the disabled look */
+  color: #a0a0a0; /* Optional: Changes text color to a gray shade */
 }
 @media only screen and (max-width: 767px) {
   .first-row-col {
