@@ -5,7 +5,8 @@ export default {
   data() {
     return {
       showModal: false,
-      showModal2: false
+      showModal2: false,
+      showModalPrice: false
     }
   },
   methods: {}
@@ -42,19 +43,19 @@ export default {
           </a>
         </div>
         <div class="col-lg-3 col-md-6 col-12">
-            <div class="p-3 h-100 margin-t-20"
-                 @click="showModal2 = true"
-                 style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
-              <div class="hover-effect">
-                <img src="@/assets/image/onlayn_kuzatuv.svg" alt="" class="custom-icons">
-                <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.online_checking.card_title') }}</h4>
-                <p class="padding-t-15 text-color">
-                  {{ $t('services.online_checking.card_subtitle1') }}
-                  <a href="https://cabinet.fairtech.uz" target="_blank">cabinet.fairtech.uz</a>
-                  {{ $t('services.online_checking.card_subtitle2') }}
-                </p>
-              </div>
+          <div class="p-3 h-100 margin-t-20"
+               @click="showModal2 = true"
+               style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
+            <div class="hover-effect">
+              <img src="@/assets/image/onlayn_kuzatuv.svg" alt="" class="custom-icons">
+              <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.online_checking.card_title') }}</h4>
+              <p class="padding-t-15 text-color">
+                {{ $t('services.online_checking.card_subtitle1') }}
+                <a href="https://cabinet.fairtech.uz" target="_blank">cabinet.fairtech.uz</a>
+                {{ $t('services.online_checking.card_subtitle2') }}
+              </p>
             </div>
+          </div>
         </div>
         <div class="col-lg-3 col-md-6 col-12">
           <router-link to="/product-services" teg="div" class="col margin-t-20">
@@ -102,21 +103,32 @@ export default {
           </div>
         </div>
         <div class="col-lg-3 col-md-6 col-12 mb-4">
-          <router-link to="/fair-price" teg="div">
-            <div class="p-3 h-100"
-                 style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
-              <div class="hover-effect">
-                <img src="@/assets/image/fair_prce.svg" alt="" class="custom-icons">
-                <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.fair_price.card_title') }}</h4>
-                <hr class="green-gradient-bg my-1" style="height: 2px">
-                <h5 class="text-color font-weight-bold">{{ $t('services.fair_price.sub_title') }}</h5>
-
-                <p class="padding-t-15 text-color">
-                  {{ $t('services.fair_price.body_title') }}
-                </p>
-              </div>
+          <div class="p-3 h-100"
+               @click="showModalPrice = true"
+               style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
+            <div class="hover-effect">
+              <img src="@/assets/image/onlayn_kuzatuv.svg" alt="" class="custom-icons">
+              <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.fair_price.card_title') }}</h4>
+              <p class="padding-t-15 text-color">
+                {{ $t('services.fair_price.body_title') }}
+              </p>
             </div>
-          </router-link>
+          </div>
+          <!--          <router-link to="/fair-price" teg="div">-->
+          <!--            <div class="p-3 h-100"-->
+          <!--                 style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">-->
+          <!--              <div class="hover-effect">-->
+          <!--                <img src="@/assets/image/fair_prce.svg" alt="" class="custom-icons">-->
+          <!--                <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.fair_price.card_title') }}</h4>-->
+          <!--                <hr class="green-gradient-bg my-1" style="height: 2px">-->
+          <!--                <h5 class="text-color font-weight-bold">{{ $t('services.fair_price.sub_title') }}</h5>-->
+
+          <!--                <p class="padding-t-15 text-color">-->
+          <!--                  {{ $t('services.fair_price.body_title') }}-->
+          <!--                </p>-->
+          <!--              </div>-->
+          <!--            </div>-->
+          <!--          </router-link>-->
         </div>
         <div class="col-lg-3 col-md-6 col-12 mb-4">
           <a href="https://t.me/rquzBot" target="_blank" teg="div">
@@ -178,20 +190,20 @@ export default {
             </div>
           </router-link>
         </div>
-<!--        <div class="col-lg-3 col-md-6 col-12">-->
-<!--          <router-link to="/online-kuzatuv" teg="div">-->
-<!--            <div class="p-3 h-100"-->
-<!--                 style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">-->
-<!--              <div class="hover-effect">-->
-<!--                <img src="@/assets/image/online_sud_qarori.svg" alt="" class="custom-icons">-->
-<!--                <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('online kuzatuv') }}</h4>-->
-<!--                <p class="padding-t-15 text-color">-->
-<!--                  {{ $t('court_online.card_subtitle') }}-->
-<!--                </p>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </router-link>-->
-<!--        </div>-->
+        <!--        <div class="col-lg-3 col-md-6 col-12">-->
+        <!--          <router-link to="/online-kuzatuv" teg="div">-->
+        <!--            <div class="p-3 h-100"-->
+        <!--                 style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">-->
+        <!--              <div class="hover-effect">-->
+        <!--                <img src="@/assets/image/online_sud_qarori.svg" alt="" class="custom-icons">-->
+        <!--                <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('online kuzatuv') }}</h4>-->
+        <!--                <p class="padding-t-15 text-color">-->
+        <!--                  {{ $t('court_online.card_subtitle') }}-->
+        <!--                </p>-->
+        <!--              </div>-->
+        <!--            </div>-->
+        <!--          </router-link>-->
+        <!--        </div>-->
 
       </div>
 
@@ -238,7 +250,7 @@ export default {
                    style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
                 <div class="hover-effect">
                   <img src="@/assets/image/onlayn_kuzatuv.svg" alt="" class="custom-icons">
-<!--                  <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.online_checking.card_title') }}</h4>-->
+                  <!--                  <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.online_checking.card_title') }}</h4>-->
                   <p class="padding-t-15 text-color">
                     {{ $t('services.online_checking.card_subtitle1') }}
                     <a href="https://cabinet.fairtech.uz" target="_blank">cabinet.fairtech.uz</a>
@@ -255,9 +267,57 @@ export default {
                    style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
                 <div class="hover-effect">
                   <img src="@/assets/image/online_sud_qarori.svg" alt="" class="custom-icons">
-<!--                  <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('online_kuzatuv.card_title') }}</h4>-->
+                  <!--                  <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('online_kuzatuv.card_title') }}</h4>-->
                   <p class="padding-t-15 text-color">
                     {{ $t('online_kuzatuv.card_subtitle') }}
+                  </p>
+                </div>
+              </div>
+            </router-link>
+          </b-col>
+        </b-row>
+      </b-modal>
+
+      <b-modal id="modal-2" hide-footer :title="$t('services.fair_price.card_title')" v-model="showModalPrice"
+               size="lg">
+        <b-row>
+          <b-col>
+            <router-link to="/fair-price" teg="div">
+              <div class="p-3 h-100"
+                   style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
+                <div class="hover-effect">
+                  <b-row>
+                    <b-col cols="3">
+                      <img src="@/assets/image/onlayn_kuzatuv.svg" alt="" class="custom-icons">
+                    </b-col>
+                    <b-col cols="9">
+                      <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.fair_price.card_title') }}</h4>
+                    </b-col>
+                  </b-row>
+                  <p class="padding-t-15 text-color">
+                    {{ $t('services.fair_price.body_title') }}
+                  </p>
+                </div>
+              </div>
+
+            </router-link>
+          </b-col>
+
+          <b-col>
+            <router-link to="/fair-price-stations" teg="div">
+              <div class="p-3 h-100"
+                   style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
+                <div class="hover-effect">
+                  <b-row>
+                    <b-col cols="3">
+                      <img src="@/assets/image/statistik_malumot.svg" alt="" class="custom-icons">
+                    </b-col>
+                    <b-col cols="9">
+                      <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('stations.title') }}</h4>
+                    </b-col>
+                  </b-row>
+                  <p class="padding-t-15 text-color">
+                    {{ $t('stations.title1') }}
                   </p>
                 </div>
               </div>
@@ -300,10 +360,12 @@ export default {
   border-radius: 5px;
   text-align: center;
 }
-.custom-icons{
+
+.custom-icons {
   width: 50px;
   height: 50px;
 }
+
 #modal-2 .modal-title {
   width: 40%;
   background-color: #2b675b;
@@ -311,6 +373,7 @@ export default {
   border-radius: 5px;
   padding: 3px;
 }
+
 @media only screen and (max-width: 767px) {
   .first-row-col {
     margin-top: -20px;
