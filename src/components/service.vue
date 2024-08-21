@@ -99,10 +99,10 @@ export default {
           <div class="p-3  margin-t-20"
                :class="isSubtitleVisible2 ? 'active-card' : 'inactive-card'"
                style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
-            <div class="hover-effect"@click="showModal2 = true">
+            <div class="hover-effect" @click="showModal2 = true">
               <img src="@/assets/image/onlayn_kuzatuv.svg" alt="" class="custom-icons">
               <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.online_checking.card_title') }}</h4>
-              <p v-if="isSubtitleVisible2"class="padding-t-15 text-color">
+              <p v-if="isSubtitleVisible2"  class="padding-t-15 text-color">
                 {{ $t('services.online_checking.card_subtitle1') }}
                 <a href="https://cabinet.fairtech.uz" target="_blank">cabinet.fairtech.uz</a>
                 {{ $t('services.online_checking.card_subtitle2') }}
