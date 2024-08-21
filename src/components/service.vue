@@ -4,11 +4,56 @@ import da from "vue2-datepicker/locale/es/da";
 export default {
   data() {
     return {
+      isSubtitleVisible: false,
+      isSubtitleVisible2: false,
+      isSubtitleVisible3: false,
+      isSubtitleVisible4: false,
+      isSubtitleVisible5: false,
+      isSubtitleVisible6: false,
+      isSubtitleVisible7: false,
+      isSubtitleVisible8: false,
+      isSubtitleVisible9: false,
+      isSubtitleVisible10: false,
       showModal: false,
       showModal2: false
     }
   },
-  methods: {}
+  methods: {
+    toggleSubtitle(code) {
+      switch (code) {
+        case 'one':
+          this.isSubtitleVisible = !this.isSubtitleVisible;
+          break;
+        case 'two':
+          this.isSubtitleVisible2 = !this.isSubtitleVisible2;
+          break;
+        case 'three':
+          this.isSubtitleVisible3 = !this.isSubtitleVisible3;
+          break;
+        case 'four':
+          this.isSubtitleVisible4 = !this.isSubtitleVisible4;
+          break;
+        case 'five':
+          this.isSubtitleVisible5 = !this.isSubtitleVisible5;
+          break;
+        case 'six':
+          this.isSubtitleVisible6 = !this.isSubtitleVisible6;
+          break;
+        case 'seven':
+          this.isSubtitleVisible7 = !this.isSubtitleVisible7;
+          break;
+        case 'eight':
+          this.isSubtitleVisible8 = !this.isSubtitleVisible8;
+          break;
+        case 'nine':
+          this.isSubtitleVisible9 = !this.isSubtitleVisible9;
+          break;
+        case 'ten':
+          this.isSubtitleVisible10 = !this.isSubtitleVisible10;
+          break;
+      }
+    },
+  }
 };
 
 </script>
@@ -28,155 +73,215 @@ export default {
       </div>
       <div class="row margin-t-30">
         <div class="col-lg-3 col-md-6 col-12">
-          <a href="https://cabinet.fairtech.uz/murojaat-create" target="_blank" class="col margin-t-20">
-            <div class="p-3 h-100"
+            <div class="p-3 margin-t-20" :class="isSubtitleVisible ? 'active-card' : 'inactive-card'"
                  style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
               <div class="hover-effect">
+                <a href="https://cabinet.fairtech.uz/murojaat-create" target="_blank">
                 <img src="@/assets/image/online_sud_qarori.svg" alt="" class="custom-icons">
                 <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.appeal_title') }}</h4>
-                <p class="padding-t-15 text-color">
+
+                <!-- Toggleable Subtitle -->
+                <p v-if="isSubtitleVisible" class="padding-t-15 text-color">
                   {{ $t('services.appeal_subtitle') }}
                 </p>
+                </a>
               </div>
+              <!-- "Batafsil" Button with Chevron -->
+              <button @click="toggleSubtitle('one')" class="btn btn-link p-0">
+                {{ $t('actions.details') }}
+                <i :class="isSubtitleVisible ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+              </button>
             </div>
-          </a>
         </div>
+
         <div class="col-lg-3 col-md-6 col-12">
-            <div class="p-3 h-100 margin-t-20"
-                 @click="showModal2 = true"
+            <div class="p-3 margin-t-20" :class="isSubtitleVisible2 ? 'active-card' : 'inactive-card'"
                  style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
-              <div class="hover-effect">
+              <div class="hover-effect" @click="showModal2 = true">
                 <img src="@/assets/image/onlayn_kuzatuv.svg" alt="" class="custom-icons">
                 <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.online_checking.card_title') }}</h4>
-                <p class="padding-t-15 text-color">
+                <p v-if="isSubtitleVisible2" class="padding-t-15 text-color">
                   {{ $t('services.online_checking.card_subtitle1') }}
                   <a href="https://cabinet.fairtech.uz" target="_blank">cabinet.fairtech.uz</a>
                   {{ $t('services.online_checking.card_subtitle2') }}
                 </p>
               </div>
+              <!-- "Batafsil" Button with Chevron -->
+              <button @click="toggleSubtitle('two')" class="btn btn-link p-0">
+                {{ $t('actions.details') }}
+                <i :class="isSubtitleVisible2 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+              </button>
             </div>
         </div>
+
         <div class="col-lg-3 col-md-6 col-12">
-          <router-link to="/product-services" teg="div" class="col margin-t-20">
-            <div class="p-3 h-100"
+            <div class="p-3 margin-t-20" :class="isSubtitleVisible3 ? 'active-card' : 'inactive-card'"
                  style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
               <div class="hover-effect">
+                <router-link to="/product-services">
                 <img src="@/assets/image/product_info.svg" alt="" class="custom-icons">
                 <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.product_info.card_title') }}</h4>
-                <hr class="green-gradient-bg my-1" style="height: 2px">
+                <hr class="green-gradient-bg my-1 w-75 ml-0" style="height: 2px">
                 <h4 class="text-color font-weight-bold">{{ $t('services.product_info.card_subtitle1') }}</h4>
-                <p class="padding-t-15 text-color">
+                <p class="padding-t-15 text-color" v-if="isSubtitleVisible3">
                   {{ $t('services.product_info.card_subtitle2') }}
                 </p>
-              </div>
-            </div>
           </router-link>
+              </div>
+              <!-- "Batafsil" Button with Chevron -->
+              <button @click="toggleSubtitle('three')" class="btn btn-link p-0">
+                {{ $t('actions.details') }}
+                <i :class="isSubtitleVisible3 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+              </button>
+            </div>
+
         </div>
+
         <div class="col-lg-3 col-md-6 col-12">
-          <a href="https://cabinet.fairtech.uz/reporting/menu" target="_blank" class="col margin-t-20">
-            <div class="p-3 h-100"
+            <div class="p-3 margin-t-20" :class="isSubtitleVisible4 ? 'active-card' : 'inactive-card'"
                  style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
               <div class="hover-effect">
+                <a href="https://cabinet.fairtech.uz/reporting/menu" target="_blank">
                 <img src="@/assets/image/statistik_malumot.svg" alt="" class="custom-icons">
                 <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.online_report.card_title') }}</h4>
-                <p class="padding-t-15 text-color">
+                <p class="padding-t-15 text-color" v-if="isSubtitleVisible4">
                   {{ $t('services.online_report.card_subtitle') }}
                 </p>
+                </a>
               </div>
+              <!-- "Batafsil" Button with Chevron -->
+              <button @click="toggleSubtitle('four')" class="btn btn-link p-0">
+                {{ $t('actions.details') }}
+                <i :class="isSubtitleVisible4 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+              </button>
             </div>
-          </a>
         </div>
 
       </div>
+
       <div class="row mt-5">
         <div class="col-lg-3 col-md-6 col-12 mb-4">
-          <div class="p-3" style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px"
-               @click="showModal = true">
-            <div class="hover-effect h-100">
+          <div class="p-3" :class="isSubtitleVisible5 ? 'active-card' : 'inactive-card'"
+               style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
+            <div class="hover-effect" @click="showModal = true">
               <img src="@/assets/image/rozilik_berish.svg" alt="" class="custom-icons">
               <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.agreement.card_title') }}</h4>
-              <p class="padding-t-15 text-color">
+              <p class="padding-t-15 text-color" v-if="isSubtitleVisible5">
                 {{ $t('services.agreement.card_subtitle') }}
               </p>
             </div>
+            <!-- "Batafsil" Button with Chevron -->
+            <button @click="toggleSubtitle('five')" class="btn btn-link p-0">
+              {{ $t('actions.details') }}
+              <i :class="isSubtitleVisible5 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+            </button>
           </div>
         </div>
+
         <div class="col-lg-3 col-md-6 col-12 mb-4">
-          <router-link to="/fair-price" teg="div">
-            <div class="p-3 h-100"
+            <div class="p-3" :class="isSubtitleVisible6 ? 'active-card' : 'inactive-card'"
                  style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
               <div class="hover-effect">
+                <router-link to="/fair-price" >
                 <img src="@/assets/image/fair_prce.svg" alt="" class="custom-icons">
                 <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('services.fair_price.card_title') }}</h4>
-                <hr class="green-gradient-bg my-1" style="height: 2px">
+                <hr class="green-gradient-bg my-1 w-50 ml-0" style="height: 2px">
                 <h5 class="text-color font-weight-bold">{{ $t('services.fair_price.sub_title') }}</h5>
 
-                <p class="padding-t-15 text-color">
+                <p class="padding-t-15 text-color" v-if="isSubtitleVisible6">
                   {{ $t('services.fair_price.body_title') }}
                 </p>
+                </router-link>
               </div>
+              <!-- "Batafsil" Button with Chevron -->
+              <button @click="toggleSubtitle('six')" class="btn btn-link p-0">
+                {{ $t('actions.details') }}
+                <i :class="isSubtitleVisible6 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+              </button>
             </div>
-          </router-link>
         </div>
+
         <div class="col-lg-3 col-md-6 col-12 mb-4">
-          <a href="https://t.me/rquzBot" target="_blank" teg="div">
-            <div class="p-3 h-100"
+            <div class="p-3" :class="isSubtitleVisible7 ? 'active-card' : 'inactive-card'"
                  style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
               <div class="hover-effect">
+                <a href="https://t.me/rquzBot" target="_blank">
                 <img src="@/assets/image/rqbot.svg" alt="" class="custom-icons">
                 <!--                <i class="fab fa-telegram-plane"></i>-->
                 <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('telegram_menu_title') }}</h4>
-                <p class="padding-t-10 text-color">
+                <p class="padding-t-10 text-color" v-if="isSubtitleVisible7">
                   {{ $t('telegram_menu_subtitle') }}
                 </p>
+                </a>
               </div>
+              <!-- "Batafsil" Button with Chevron -->
+              <button @click="toggleSubtitle('seven')" class="btn btn-link p-0">
+                {{ $t('actions.details') }}
+                <i :class="isSubtitleVisible7 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+              </button>
             </div>
-          </a>
         </div>
+
         <div class="col-lg-3 col-md-6 col-12 mb-4">
-          <router-link to="/court-table">
-            <div class="p-3 h-100"
+            <div class="p-3" :class="isSubtitleVisible8 ? 'active-card' : 'inactive-card'"
                  style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
               <div class="hover-effect">
+                <router-link to="/court-table">
                 <img src="@/assets/image/statistik_malumot.svg" alt="" class="custom-icons">
                 <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('court_table_list.card_title') }}</h4>
-                <p class="padding-t-15 text-color">
+                <p class="padding-t-15 text-color" v-if="isSubtitleVisible8">
                   {{ $t('court_table_list.card_subtitle') }}
                 </p>
+                </router-link>
               </div>
+              <!-- "Batafsil" Button with Chevron -->
+              <button @click="toggleSubtitle('eight')" class="btn btn-link p-0">
+                {{ $t('actions.details') }}
+                <i :class="isSubtitleVisible8 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+              </button>
             </div>
-          </router-link>
         </div>
       </div>
 
       <div class="row margin-t-30 d-flex justify-content-center">
         <div class="col-lg-3 col-md-6 col-12">
-          <router-link to="/sud-xabarnomasi" teg="div">
-            <div class="p-3 h-100"
+            <div class="p-3" :class="isSubtitleVisible9 ? 'active-card' : 'inactive-card'"
                  style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
               <div class="hover-effect">
+                <router-link to="/sud-xabarnomasi" teg="div">
                 <img src="@/assets/image/Sud qarori.svg" alt="" class="custom-icons">
                 <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('sud_xabarnoma.card_title') }}</h4>
-                <p class="padding-t-15 text-color">
+                <p class="padding-t-15 text-color" v-if="isSubtitleVisible9">
                   {{ $t('sud_xabarnoma.card_subtitle') }}
                 </p>
+                </router-link>
               </div>
+              <!-- "Batafsil" Button with Chevron -->
+              <button @click="toggleSubtitle('nine')" class="btn btn-link p-0">
+                {{ $t('actions.details') }}
+                <i :class="isSubtitleVisible9 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+              </button>
             </div>
-          </router-link>
         </div>
+
         <div class="col-lg-3 col-md-6 col-12">
-          <router-link to="/court-online" teg="div">
-            <div class="p-3 h-100"
+            <div class="p-3" :class="isSubtitleVisible10 ? 'active-card' : 'inactive-card'"
                  style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
               <div class="hover-effect">
+                <router-link to="/court-online" teg="div">
                 <img src="@/assets/image/online_sud_qarori.svg" alt="" class="custom-icons">
                 <h4 class="padding-t-15 text-color font-weight-bold">{{ $t('court_online.card_title') }}</h4>
-                <p class="padding-t-15 text-color">
+                <p class="padding-t-15 text-color" v-if="isSubtitleVisible10">
                   {{ $t('court_online.card_subtitle') }}
                 </p>
+                </router-link>
               </div>
+              <!-- "Batafsil" Button with Chevron -->
+              <button @click="toggleSubtitle('ten')" class="btn btn-link p-0">
+                {{ $t('actions.details') }}
+                <i :class="isSubtitleVisible10 ? 'fa fa-chevron-up' : 'fa fa-chevron-down'"></i>
+              </button>
             </div>
-          </router-link>
         </div>
 <!--        <div class="col-lg-3 col-md-6 col-12">-->
 <!--          <router-link to="/online-kuzatuv" teg="div">-->
@@ -310,6 +415,26 @@ export default {
   color: #ffffff;
   border-radius: 5px;
   padding: 3px;
+}
+/*
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+*/
+.active-card{
+  height: 100%;
+}
+.inactive-card{
+  height: 212px;
 }
 @media only screen and (max-width: 767px) {
   .first-row-col {
