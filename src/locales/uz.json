@@ -4491,6 +4491,40 @@
     "docno": "Imtiyoz no'meri",
     "docname": "Imtiyoz nomi"
   },
+  "stations": {
+    "title": "Yoqilg'i maxsulotlari",
+    "title1": "O'zbekiston Respublikasidagi Benzin, Propan, Metan yoqilg'ilarining o'rtacha narxi",
+    "count": "Shaxobchalar soni",
+    "max_cost": "Eng yuqori narx",
+    "min_cost": "Eng arzon narx",
+    "max_cost1": "Yuqori narx",
+    "min_cost1": "Arzon narx",
+    "propan": "Propan",
+    "metan": "Metan",
+    "benzin": "Benzin",
+    "benzin80": "Benzin AI 80",
+    "benzin92": "Benzin AI 92",
+    "benzin95": "Benzin AI 95",
+    "dizel": "Dizel",
+    "info_stations": "Shaxobchalar ma’lumotlari",
+    "propan_stations": "Propan shaxobchasi",
+    "metan_stations": "Metan shaxobchasi",
+    "benzin_stations": "Benzin shaxobchasi",
+    "grafik": "Narx o‘zgarishi grafigi",
+    "oy": "Oy",
+    "kun": "Kun",
+    "stations_name": "Shaxobcha nomi",
+    "address": "Shaxobcha manzili",
+    "direktor": "Shaxobcha direktori",
+    "name": "Yoqilg'i nomi",
+    "cost": "Narxi",
+    "belgilangan": "Belgilangan narxi",
+    "date": "Sana",
+    "loading": "Ma'lumotlar yuklanmoqda...",
+    "stations_search": "Shaxobchalar bo'yicha qidirish",
+    "stations_info": "Shaxobcha ma’lumotlari",
+    "stations_cost_info": "Sotilgan yoqilg'i ma’lumotlari"
+  },
   "court_online": {
     "card_title": "ONLAYN QAROR VA KO‘RSATMA",
     "card_subtitle": "Maxsus komissiya tomonidan qabul qilingan qaror va ko‘rsatmalarni inson omilisiz onlayn olish",
@@ -4534,5 +4568,9 @@
     "work_number_placeholder": "Ish raqamini kiriting",
     "take_court_btn": "Tekshirish",
     "errorFeedback": "Ish raqamini to`g`ri kiriting ( ' - ' , ' / ' )"
+  },
+  "loader": {
+    "waiting": "Iltimos kuting!",
+    "downloading": "Ma'lumotlar yuklanmoqda."
   }
 }
