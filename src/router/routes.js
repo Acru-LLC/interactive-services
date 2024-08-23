@@ -42,7 +42,7 @@ const routes = [
         // },
         component: () => import('/src/modules/fair-price/Main.vue'),
         children: []
-    }
+    },
     {
         path: '/product-services',
         name: 'ProductInfoServices',

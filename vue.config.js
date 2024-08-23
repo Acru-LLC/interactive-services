@@ -1,4 +1,11 @@
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true
-})
+module.exports = {
+  pluginOptions: {
+    i18n: {
+      locale: 'uzCyrillic',
+      fallbackLocale: 'uzCyrillic',
+      localeDir: 'locales',
+      enableInSFC: false
+    }
+  },
+  productionSourceMap: false
+}

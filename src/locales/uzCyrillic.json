@@ -3818,5 +3818,9 @@
     "work_number_placeholder": "Иш рақамини киритинг",
     "take_court_btn": "Текшириш",
     "errorFeedback": "Иш рақамини тўғри киритинг ( ' - ' , ' / ' )"
+  },
+  "loader": {
+    "waiting": "Илтимос кутинг!",
+    "downloading": "Маълумотлар юкланмоқда."
   }
 }

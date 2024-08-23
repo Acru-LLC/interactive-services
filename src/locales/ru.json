@@ -4569,5 +4569,9 @@
     "work_number_placeholder": "Введите номер дела",
     "take_court_btn": "Проверять",
     "errorFeedback": "Введите номер задания правильно ( ' - ' , ' / ' )"
+  },
+  "loader": {
+    "waiting": "Пожалуйста, подождите!",
+    "downloading": "Загрузка данных."
   }
 }
