@@ -31,11 +31,11 @@ export default {
         return res;
     },
     getRegionPrice: async function (soato, withLoader = false) {
-        let res = await ApiService.post(`/gas-station/get-region-price-outer`, withLoader);
+        let res = await ApiService.post(`/gas-station/get-station-all-region-count`, withLoader);
         return res;
     },
     getStationCount: async function (soato, withLoader = false) {
-        let res = await ApiService.post(`/gas-station/get-station-count?soato=${soato ? soato : ''}`, withLoader);
+        let res = await ApiService.post(`/gas-station/get-station-count-outer?soato=${soato ? soato : ''}`, withLoader);
         return res;
     },
     getStationByMxik: async function (obj, body, withLoader = false) {

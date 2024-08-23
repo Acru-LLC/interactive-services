@@ -37,13 +37,21 @@
         <!-- Tanlangan hudud ma'lumotlarini ko'rsatish -->
         <foreignObject x="800" y="0" width="250" height="200">
           <div xmlns="http://www.w3.org/1999/xhtml" class="info-panel">
+            <div style="text-align: center; justify-content: center; color:  #2b675b; font-size: 14px;">
+              {{ $t('submodules.integration.kadastr_soliq_info.response.count_subjects') }}
+
+            </div>
+            <div style="text-align: center; justify-content: center; color:  #2b675b; margin-top: -5px">
+              <i style=" color:  #2b675b; font-size: 11px;">({{ $t('stations.republic') }})</i>
+            </div>
+
             <b-row>
               <b-col cols="6" class="p-0 m-0" style="padding: 0.8px !important;">
                 <b-button style="background: #0D64AD" size="sm" block>{{ $t('stations.propan') }}</b-button>
               </b-col>
               <b-col cols="6" class="p-0 m-0" style="padding: 0.8px !important;">
                 <b-button style="background: #0D64AD" size="sm" block>
-                  {{ getStationCounts && getStationCounts.propan ? propan : '_ _ _' }}
+                  <span v-if="getStationCounts.propan"> {{ formatNumber(getStationCounts.propan) }}  </span>
                 </b-button>
               </b-col>
             </b-row>
@@ -53,7 +61,7 @@
               </b-col>
               <b-col cols="6" class="p-0 m-0" style="padding: 0.8px !important;">
                 <b-button style="background: #364896" size="sm" block>
-                  {{ getStationCounts && getStationCounts.metan ? metan : '_ _ _' }}
+                  <span v-if="getStationCounts.metan"> {{ formatNumber(getStationCounts.metan) }}  </span>
                 </b-button>
               </b-col>
             </b-row>
@@ -63,7 +71,7 @@
               </b-col>
               <b-col cols="6" class="p-0 m-0" style="padding: 0.8px !important;">
                 <b-button style="background: #D77C21" size="sm" block>
-                  {{ getStationCounts && getStationCounts.benzin ? benzin : '_ _ _' }}
+                  <span v-if="getStationCounts.benzin"> {{ formatNumber(getStationCounts.benzin) }}  </span>
                 </b-button>
               </b-col>
             </b-row>
@@ -1674,7 +1682,7 @@ export default {
     async getRegionPrices(soato) {
       Service.getRegionPrice(soato)
           .then(async res => {
-            this.regionPricesForMap = res.data
+            this.regionStationsCountForMap = res.data
             // if (soato == '1703') {
             //   this.$set(this.regionPricesForMap, 'andijon', res.data)
             // } else if (soato == '1706') {
@@ -1824,8 +1832,8 @@ export default {
     }
   },
   async created() {
-    // await this.getRegionPricesFor()
-    // await this.getStationCount()
+    await this.getRegionPricesFor()
+    await this.getStationCount()
     // await this.gasStationListType()
     // await this.getRegions()
   },
@@ -2110,7 +2118,7 @@ tbody tr:nth-child(even) {
 
 .loaderBody {
   width: 100%;
-  height: 50rem;
+  height: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
