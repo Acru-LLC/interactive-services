@@ -205,7 +205,7 @@ export default {
       const formattedDate = today.toISOString().split('T')[0];
       let check = {
         soato: data,
-        date: "2023-11-02" // formattedDate  // 2023-11-02
+        date: formattedDate // formattedDate  // 2023-11-02
       };
       this.searchLoader = true;
       return CheckService.courtTable(check)
