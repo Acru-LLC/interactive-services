@@ -423,8 +423,8 @@ export default {
             </router-link>
           </b-col>
 
-          <b-col style="cursor: not-allowed">
-            <router-link to="/fair-price-stations" teg="div" class="disabled-card">
+          <b-col>
+            <router-link to="/fair-price-stations" teg="div">
               <div class="p-3 h-100"
                    style="border-radius: 5px; cursor: pointer; box-shadow: rgb(201 219 215) 2px 4px 8px 0px">
                 <div class="hover-effect">
