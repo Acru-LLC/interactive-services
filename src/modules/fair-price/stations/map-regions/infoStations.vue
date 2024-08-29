@@ -30,36 +30,61 @@
         </b-button>
       </b-col>
     </b-row>
+
     <b-row style="font-weight: bold; margin-top: 15px">
       <b-col cols="3">{{ $t('stations.name') }}</b-col>
       <b-col cols="3">{{ $t('pharm.medicationPaymentDate') }}</b-col>
       <b-col cols="3">{{ $t('pharm.pharmUlgurji.productPaymentPrice') }}</b-col>
       <b-col cols="3">{{ $t('stations.belgilangan') }}</b-col>
     </b-row>
-    <b-row v-if="Object.keys(resData).length !== 0">
-      <b-col cols="3">{{ resData.AI80 ? $t('stations.benzin80') : '- - -' }}</b-col>
-      <b-col cols="3">{{ resData.AI80 && resData.AI80.date ? resData.AI80 && resData.AI80.date : '- - -' }}</b-col>
-      <b-col cols="3">
-        {{ resData.AI80 && resData.AI80.middlePrice ? formatNumber(Math.trunc(resData.AI80.middlePrice)) : '- - -' }}
-      </b-col>
-      <b-col cols="3">{{ '- - -' }}</b-col>
-    </b-row>
-    <b-row v-if="Object.keys(resData).length !== 0">
-      <b-col cols="3">{{ resData.AI92 ? $t('stations.benzin92') : '- - -' }}</b-col>
-      <b-col cols="3">{{ resData.AI92 && resData.AI92.date ? resData.AI92 && resData.AI92.date : '- - -' }}</b-col>
-      <b-col cols="3">
-        {{ resData.AI92 && resData.AI92.middlePrice ? formatNumber(Math.trunc(resData.AI92.middlePrice)) : '- - -' }}
-      </b-col>
-      <b-col cols="3">{{ '- - -' }}</b-col>
-    </b-row>
-    <b-row v-if="Object.keys(resData).length !== 0">
-      <b-col cols="3">{{ resData.AI95 ? $t('stations.benzin95') : '- - -' }}</b-col>
-      <b-col cols="3">{{ resData.AI95 && resData.AI95.date ? resData.AI95 && resData.AI95.date : '- - -' }}</b-col>
-      <b-col cols="3">
-        {{ resData.AI95 && resData.AI95.middlePrice ? formatNumber(Math.trunc(resData.AI95.middlePrice)) : '- - -' }}
-      </b-col>
-      <b-col cols="3">{{ '- - -' }}</b-col>
-    </b-row>
+
+    <div v-if="type=='BENZIN'">
+
+      <b-row v-if="Object.keys(resData).length !== 0">
+        <b-col cols="3">{{ resData.AI80 ? $t('stations.benzin80') : '- - -' }}</b-col>
+        <b-col cols="3">{{ resData.AI80 && resData.AI80.date ? resData.AI80 && resData.AI80.date : '- - -' }}</b-col>
+        <b-col cols="3">
+          {{ resData.AI80 && resData.AI80.middlePrice ? formatNumber(Math.trunc(resData.AI80.middlePrice)) : '- - -' }}
+        </b-col>
+        <b-col cols="3">{{ '- - -' }}</b-col>
+      </b-row>
+      <b-row v-if="Object.keys(resData).length !== 0">
+        <b-col cols="3">{{ resData.AI92 ? $t('stations.benzin92') : '- - -' }}</b-col>
+        <b-col cols="3">{{ resData.AI92 && resData.AI92.date ? resData.AI92 && resData.AI92.date : '- - -' }}</b-col>
+        <b-col cols="3">
+          {{ resData.AI92 && resData.AI92.middlePrice ? formatNumber(Math.trunc(resData.AI92.middlePrice)) : '- - -' }}
+        </b-col>
+        <b-col cols="3">{{ '- - -' }}</b-col>
+      </b-row>
+      <b-row v-if="Object.keys(resData).length !== 0">
+        <b-col cols="3">{{ resData.AI95 ? $t('stations.benzin95') : '- - -' }}</b-col>
+        <b-col cols="3">{{ resData.AI95 && resData.AI95.date ? resData.AI95 && resData.AI95.date : '- - -' }}</b-col>
+        <b-col cols="3">
+          {{ resData.AI95 && resData.AI95.middlePrice ? formatNumber(Math.trunc(resData.AI95.middlePrice)) : '- - -' }}
+        </b-col>
+        <b-col cols="3">{{ '- - -' }}</b-col>
+      </b-row>
+    </div>
+    <div v-if="type=='METAN'">
+      <b-row v-if="Object.keys(resData).length !== 0">
+        <b-col cols="3">{{ resData.METAN ? $t('stations.metan') : '- - -' }}</b-col>
+        <b-col cols="3">{{ resData.METAN && resData.METAN.date ? resData.METAN && resData.METAN.date : '- - -' }}</b-col>
+        <b-col cols="3">
+          {{ resData.METAN && resData.METAN.middlePrice ? formatNumber(Math.trunc(resData.METAN.middlePrice)) : '- - -' }}
+        </b-col>
+        <b-col cols="3">{{ '- - -' }}</b-col>
+      </b-row>
+    </div>
+    <div v-if="type=='PROPAN'">
+      <b-row v-if="Object.keys(resData).length !== 0">
+        <b-col cols="3">{{ resData.PROPAN ? $t('stations.propan') : '- - -' }}</b-col>
+        <b-col cols="3">{{ resData.PROPAN && resData.PROPAN.date ? resData.PROPAN && resData.PROPAN.date : '- - -' }}</b-col>
+        <b-col cols="3">
+          {{ resData.PROPAN && resData.PROPAN.middlePrice ? formatNumber(Math.trunc(resData.PROPAN.middlePrice)) : '- - -' }}
+        </b-col>
+        <b-col cols="3">{{ '- - -' }}</b-col>
+      </b-row>
+    </div>
 
     <b-row v-if="Object.keys(resData).length == 0"
            style="justify-content: center !important; text-align: center !important;">
