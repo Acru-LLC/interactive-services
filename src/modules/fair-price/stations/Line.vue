@@ -140,3 +140,20 @@ export default {
   color: #2b675b !important;
 }
 </style>
+
+
+
+<!--Andijon - 1703-->
+<!--Buxoro - 1706-->
+<!--Jizzax - 1708-->
+<!--Qashqadaryo - 1710-->
+<!--Qoraqalpog'iston - 1735-->
+<!--Navoiy - 1712-->
+<!--Namangan - 1714-->
+<!--Samarqand - 1718-->
+<!--Sirdaryo - 1724-->
+<!--Surxondaryo - 1722-->
+<!--Toshkent viloyati - 1727-->
+<!--Toshkent shahar - 1726-->
+<!--Farg'ona - 1730-->
+<!--Xorazm - 1733-->

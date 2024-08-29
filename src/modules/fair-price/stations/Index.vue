@@ -1,5 +1,14 @@
 <template>
   <div>
+<!--    style="fill: #304148; stroke: #b0bfc2; stroke-width: 2px; cursor: pointer;"-->
+<!--    />-->
+<!--    &lt;!&ndash; Hudud nomlarini yozish qismi &ndash;&gt;-->
+<!--    <text-->
+<!--        v-for="(region, index) in filteredLocations"-->
+<!--        :key="'text-' + index"-->
+<!--        :x="getRegionCenter(region).x"-->
+<!--        :y="getRegionCenter(region).y + 7"-->
+<!--        style="fill: #ffffff;stroke: #ffffff; font-size: 10px;text-anchor: middle; line-height: 1.5;"-->
     <b-row>
       <b-col cols="7">
         <b-card
